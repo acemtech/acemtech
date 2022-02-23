@@ -1,7 +1,7 @@
 <nav id="main-navbar">
         <div class="container">
           <div class="logo-search">
-            <a href="<?php echo URLROOT; ?>/accueil"><img src="<?php echo URLROOT; ?>/public/images/dark-logo.png" alt="acmefes news logo" class="logo"></a>
+            <a href="<?php echo URLROOT; ?>/accueil"><img src="<?php echo URLROOT; ?>/public/images/logo.png" alt="acmefes news logo" class="logo"></a>
             <form action="<?php echo URLROOT; ?>/posts/resultat" id="search-form" method="post">
                 <input type="search" name="content" placeholder="Rechercher un article">
                 <!-- Make the a tag behave as a submit button -->

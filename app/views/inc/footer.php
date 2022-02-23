@@ -1,7 +1,7 @@
 <footer id="main-footer">
         <div class="container footer-container">
           <div class="acem-fes-news-about">
-            <img src="<?php echo URLROOT; ?>/public/images/light-logo.png" alt="" class="logo">
+            <img src="<?php echo URLROOT; ?>/public/images/logo.png" alt="" class="logo">
             <p>L’ACEM TECH est une solution innovante proposée par le Club Académique et Scientifique de l’ACEM de Fès à l’intention de garantir l’enrichissement et la valorisation des projets innovants, de cultiver l’esprit d’innovation, développer et faciliter l’esprit d’épanouissement.</p>
           </div>
 

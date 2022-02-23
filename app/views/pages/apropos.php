@@ -45,7 +45,7 @@
                 <article>
                   <h1 class="text-primary">VOUS ETES DEVELOPPEUR?</h1>
                   <p>Si vous pensez être capable de nous aider à améliorer le projet par tout les moyens possibles, merci de nous contacter via mail: <span class="bold italic text-bold">geeks@acem.tech</span>.<br>
-                  Etant un projet purement open source, vous pourrez contribuer au<a href="https://github.com/acemtech/acemtech">projet sur GitHub</a>.<br>
+                  Etant un projet purement open source, vous pourrez contribuer au<a href="https://github.com/acemtech/acemtech"> projet sur GitHub</a>.<br>
                   Vous pouvez lire les détails concernant comment y contribuer sur ce <a href="http://acem.tech/posts/article/2">lien</a>.</p>
                 </article>
 
