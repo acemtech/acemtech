@@ -33,12 +33,15 @@ showTitle($view); ?></title>
     <link href="https://fonts.googleapis.com/css2?family=Exo&display=swap" rel="stylesheet">
     <!-- Merriweather -->
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <!--Staalish -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato|Staatliches&display=swap" rel="stylesheet"/>
     <!--  Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"/>
     <!-- Main style -->
     <link rel="stylesheet" href="<?php echo URLROOT; ?>/public/css/style.css">
     <!-- Favicon-->
-    <link rel="shortcut icon" type="image/x-icon" href="<?php echo URLROOT; ?>/public/images/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="<?php echo URLROOT; ?>/public/images/favicon.png" sizes="any">
     <!-- FOR IE9 below -->
     <!--[if lt IE 9]>
       <script src="js/respond.min.js"></script>

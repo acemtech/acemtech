@@ -8,11 +8,11 @@
           <div class="acemfes-site-map">
             <h4>LIEN UTILES</h4>
             <ul class="list">
-              <li><a href="http://acem.tech/">ACCUEIL</a></li>
-              <li><a href="https://ambacom-maroc.com/">AMBASSADE</a></li>
-              <li><a href="https://www.facebook.com/BEacem">BUREAU EXECUTIF</a></li>
-              <li><a href="http://acem.tech/posts/article/2">ACEM TECH</a></li>
-              <li><a href="http://acem.tech/utilisateurs/connexion">PUBLIER UN ARTICLE</a></li>
+              <li><a href="http://acem.tech/">Accueil</a></li>
+              <li><a href="https://ambacom-maroc.com/">Ambassade de l'Union des Comores au Maroc</a></li>
+              <li><a href="https://www.facebook.com/BEacem">Bureau Exécutif</a></li>
+              <li><a href="http://acem.tech/posts/article/2">Acem Tech</a></li>
+              <li><a href="http://acem.tech/utilisateurs/connexion">Publier un article</a></li>
             </ul>
           </div>
           <div>

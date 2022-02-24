@@ -7,12 +7,13 @@ function redirect($page) {
 
 //    Extracting 20, 21 words to print in index (2 sentences)
 function word_count($string) {
-    $str_length = str_word_count($string, 0);
-    $array_words = str_word_count($string, 1);
+    $paragraph = html_entity_decode($string);
+    $str_length = str_word_count($paragraph, 0);
+    $array_words = str_word_count($paragraph, 1);
     $words      = '';
 
     if($str_length < 20) {
-        return $string;
+        return $paragraph;
     } else {
         for ($i = 0; $i <= 20; $i++) {
             $words = $words . " " . $array_words[$i];
