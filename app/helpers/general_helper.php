@@ -5,21 +5,15 @@ function redirect($page) {
     header('location:' . URLROOT . '/' . $page);
 }
 
-//    Extracting 20, 21 words to print in index (2 sentences)
-function word_count($string) {
-    $paragraph = html_entity_decode($string);
-    $str_length = str_word_count($paragraph, 0);
-    $array_words = str_word_count($paragraph, 1);
-    $words      = '';
-
-    if($str_length < 20) {
-        return $paragraph;
-    } else {
-        for ($i = 0; $i <= 20; $i++) {
-            $words = $words . " " . $array_words[$i];
-        }
+//    Truncate the body text to any limit
+function limit_text($text, $limit) {
+    $text = html_entity_decode(strip_tags($text));
+    if (str_word_count($text, 0) > $limit) {
+        $words = str_word_count($text, 2);
+        $pos   = array_keys($words);
+        $text  = substr($text, 0, $pos[$limit]) . '...';
     }
-    return $words . "...";
+    return $text;
 }
 
 // Category color helper
