@@ -32,8 +32,8 @@
                                     <div class="category <?php colors_category($post->category);?>"><?php echo $post->category; ?></div>
                                     <h3 class="article-heading"><a href="<?php echo URLROOT; ?>/posts/article/<?php echo $post->post_id; ?>"><?php echo $post->title; ?></a></h3>
                                     <p>
-                                        <?php $str = $post->body;
-                                        echo limit_text($str, 28);
+                                        <?php
+                                        echo limit_text($post->body, 28);
                                         ?>
                                     </p>
                                      <small>Par <a href="<?php echo URLROOT; ?>/utilisateurs/profile/<?php echo $post->user_id; ?>"><strong class="italic"><?php echo $post->firstname .' '. $post->lastname; ?></strong></a>, <?php formatDate($post->published_at); ?></small>
@@ -45,8 +45,8 @@
                                     <div class="category <?php colors_category($post->category);?>"><?php echo $post->category; ?></div>
                                     <h3 class="article-heading"><a href="<?php echo URLROOT; ?>/posts/article/<?php echo $post->post_id; ?>"><?php echo $post->title; ?></a></h3>
                                     <p>
-                                        <?php $str = $post->body;
-                                        echo limit_text($str, 28);
+                                        <?php 
+                                        echo limit_text($post->body, 28);
                                         ?>
                                     </p>
                                     <small>Par <a href="<?php echo URLROOT; ?>/utilisateurs/profile/<?php echo $post->user_id; ?>"><strong class="italic"><?php echo $post->firstname .' '. $post->lastname; ?></strong></a>, <?php formatDate($post->published_at); ?></small>
