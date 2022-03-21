@@ -3,7 +3,7 @@
  * For licensing, see https://ckeditor.com/legal/ckeditor-oss-license
  */
 
-CKEDITOR.editorConfig = function( config ) {
+ CKEDITOR.editorConfig = function( config ) {
 	// Define changes to default configuration here.
 	// For complete reference see:
 	// https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html
@@ -35,4 +35,27 @@ CKEDITOR.editorConfig = function( config ) {
 
 	// Simplify the dialog windows.
 	config.removeDialogTabs = 'image:advanced;link:advanced';
+
+	// Enabling the youtube plugin
+	config.extraPlugins = 'youtube';
+
+	// Video width
+	config.youtube_width = '640';
+
+	// Video height
+	config.youtube_height = '480';
+
+	// Make responsive
+	config.youtube_responsive = true;
+
+	// show related video
+	config.youtube_related = true;
+
+	// Start video automatocally
+	config.youtube_autoplay = false;
+
+	// Show player controls
+	config.youtube_controls = true;
+  
+  	config.allowedContent = true;
 };
