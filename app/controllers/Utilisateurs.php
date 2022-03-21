@@ -124,10 +124,11 @@ class Utilisateurs extends Controller {
 //            Validate data
             if(empty($data['email'])){
                 $data['email_err'] = 'Veuillez entrer votre email';
-            } elseif($this->modelUtilisateur->findUserByEmail($data['email']) == false){
-                flash('aucun_utilisateur', 'Cet utilisateur n\'existe pas. Inscrivez-vous<a href="' . URLROOT . '/utilisateurs/inscription"> ici</a>.', 'alert alert-danger');
-                $this->view('utilisateurs/connexion', $data);
-            }
+            } 
+            // elseif($this->modelUtilisateur->findUserByEmail($data['email']) == false){
+            //     flash('aucun_utilisateur', 'Cet utilisateur n\'existe pas. Inscrivez-vous<a href="' . URLROOT . '/utilisateurs/inscription"> ici</a>.', 'alert alert-danger');
+            //     $this->view('utilisateurs/connexion', $data);
+            // }
             if(empty($data['password'])){
                 $data['password_err'] = 'Veuillez saisir votre mote de passe';
             }
