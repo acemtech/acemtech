@@ -14,7 +14,7 @@ showTitle($view); ?></title>
     />
     <meta
       name="keywords"
-      content="association des comoriens etudiant au Maroc, acem fes, comoriens de fes, acemfes, etudiants comoriens, lauréats comoriens, licence, master, Comoros, Maroc"
+      content="association des comoriens etudiants au Maroc, acem fes, comoriens de fes, acemfes, etudiants comoriens, lauréats comoriens, licence, master, Comoros, Maroc"
     />
     <meta name="author" content="ACEM TECH"/>
     <!-- Facebook and Twitter integration -->

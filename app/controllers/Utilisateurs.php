@@ -1,6 +1,6 @@
 <?php
 
-Use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
@@ -124,11 +124,7 @@ class Utilisateurs extends Controller {
 //            Validate data
             if(empty($data['email'])){
                 $data['email_err'] = 'Veuillez entrer votre email';
-            } 
-            // elseif($this->modelUtilisateur->findUserByEmail($data['email']) == false){
-            //     flash('aucun_utilisateur', 'Cet utilisateur n\'existe pas. Inscrivez-vous<a href="' . URLROOT . '/utilisateurs/inscription"> ici</a>.', 'alert alert-danger');
-            //     $this->view('utilisateurs/connexion', $data);
-            // }
+            }
             if(empty($data['password'])){
                 $data['password_err'] = 'Veuillez saisir votre mote de passe';
             }
@@ -225,17 +221,17 @@ class Utilisateurs extends Controller {
                 
             // SMTP Configuration
             $mail->isSMTP();                                            //Send using SMTP
-            $mail->Host       = 'smtp.server.com';                     //Set the SMTP server to send through
+            $mail->Host       = 'cpanel.freehosting.com';                     //Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-            $mail->Username   = 'smtp.username@server.com';                     //SMTP username
-            $mail->Password   = 'smtp.password';                               //SMTP password
+            $mail->Username   = 'geeks@acem.tech';                     //SMTP username
+            $mail->Password   = 'Pb4649t2008';                               //SMTP password
             //$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
             $mail->Port       = 587;  
             
             
             // Specifying PHPMailer headers
             $mail->setFrom($data['email'], $data['fullname']);
-            $mail->addAddress('smtp.server-mail@server.com');     //Server Mail
+            $mail->addAddress('geeks@acem.tech');     //Server Mail
            
             // Content
             

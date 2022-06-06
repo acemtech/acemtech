@@ -35,7 +35,7 @@
                             <div class="category <?php colors_category($post->category);?>"><?php echo $post->category; ?></div>
                             <h3 class="article-heading"><a href="<?php echo URLROOT; ?>/posts/article/<?php echo $post->post_id; ?>"><?php echo $post->title; ?></a></h3>
                             <p class="mb-1">
-                                <?php echo word_count($post->body); ?>
+                                <?php echo limit_text($post->body, 28); ?>
                             </p>
                             <!--                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis incidunt ipsum minima nam nobis praesentium veritatis.</p>-->
                             <small class="left-text"><?php formatDateMin($post->published_at); ?></small>

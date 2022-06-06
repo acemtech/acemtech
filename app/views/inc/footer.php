@@ -8,11 +8,11 @@
           <div class="acemfes-site-map">
             <h4>LIEN UTILES</h4>
             <ul class="list">
-              <li><a href="<?php echo URLROOT; ?>">Accueil</a></li>
+              <li><a href="https://github.com/acemtech/">Voir nos projets</a></li>
               <li><a href="https://ambacom-maroc.com/">Ambassade de l'Union des Comores au Maroc</a></li>
               <li><a href="https://www.facebook.com/BEacem">Bureau Exécutif</a></li>
-              <li><a href="<?php echo URLROOT; ?>/posts/article/2">Acem Tech</a></li>
-              <li><a href="<?php echo URLROOT; ?>/utilisateurs/connexion">Publier un article</a></li>
+              <li><a href="http://acem.tech/posts/article/2">Acem Tech</a></li>
+              <li><a href="http://acem.tech/utilisateurs/connexion">Publier un article</a></li>
             </ul>
           </div>
           <div>
@@ -28,7 +28,7 @@
 
           <div class="author-copyright">
             <p><small>Copyright &copy; 2021, Tous droits reservés<sup>&reg;</sup></small></a></p>
-            <p><small>Designed and Coded with <i class="fas fa-heart"></i> by <a href="<?php echo URLROOT; ?>">ACEM TECH</a></small></p>
+            <p><small>Designed and Coded with <i class="fas fa-heart"></i> by <a href="http://acem.tech/">ACEM TECH</a></small></p>
           </div>
         </div>
       </footer>

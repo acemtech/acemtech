@@ -15,7 +15,9 @@
                                 <div class="category <?php colors_category($post->category);?>"><?php echo $post->category; ?></div>
                                 <h3 class="article-heading"><a href="<?php echo URLROOT; ?>/posts/article/<?php echo $post->post_id; ?>"><?php echo $post->title; ?></a></h3>
                                 <p>
-                                    <?php echo limit_text($post->body, 26);?>
+                                    <?php 
+                                    echo limit_text($post->body, 26);
+                                    ?>
                                 </p>
                                 <small><a href="<?php echo URLROOT; ?>/posts/article/<?php echo $post->post_id; ?>">Lire plus...</a></small>
 

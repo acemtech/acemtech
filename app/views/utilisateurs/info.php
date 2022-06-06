@@ -14,7 +14,7 @@
                             <div class="category <?php colors_category($post->category);?>"><?php echo $post->category; ?></div>
                             <h3 class="article-heading"><a href="<?php echo URLROOT; ?>/posts/article/<?php echo $post->post_id; ?>"><?php echo $post->title; ?></a></h3>
                             <p class="mb-1">
-                                <?php echo limit_text($post->body, 30) ?>
+                                <?php echo limit_text($post->body, 28); ?>
                             </p>
                             <small class="left-text"><?php formatDateMin($post->published_at); ?></small>
 

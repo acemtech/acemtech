@@ -11,9 +11,8 @@
               <?php flash('mail_error'); ?>
               <div class="p-news">
                 <article>
-                  <h1 class="text-primary">A PROPOS D'ACEM TECH</h1><br>
-                  <p>L’<span class="text-bold">ACEM TECH</span> est une solution innovante proposée par le <span class="italic text-bold">Club Académique et Scientifique</span>
-                  de l’<span class="text-bold italic">ACEM de Fès</span> à l’intention de garantir l’enrichissement et la valorisation des <span class="text-bold">projets innovants, de cultiver l’esprit d’innovation, développer et faciliter l’esprit d’épanouissement.</span></p>
+                  <h1 class="text-primary">A PROPOS D'ACEM TECH</h1>
+                  <p>L’<span class="text-bold">ACEM TECH</span> est une solution innovante qui a pour but de garantir l’enrichissement et la valorisation des <span class="text-bold">projets innovants, de cultiver l’esprit d’innovation, développer et faciliter l’esprit d’épanouissement.</span></p>
 
                   <p>Cette plateforme a pour objectif :</p>
                 
@@ -43,7 +42,7 @@
                   <p>L' association des comoriens étudiant au Maroc (<span class="text-bold">ACEM</span>) est une association qui entre dans le cadre estudiantin, sociale, scientifique, culturel et aussi religieux. Depuis 2002, l' ACEM organise chaque année des activités scientifiques et culturelles dans le but de sensibliser le maximum possible tous les étudiants comoriens se trouvant dans l'ensemble du royaume. Parmi ces activités, on distingue la journée culturelle scientifique. Cette dernière est la plus éminente de toutes par son envergure et son importance auprès de tout un chacun.</p>
                 </article>
                 <article>
-                  <h1 class="text-primary">VOUS ETES DEVELOPPEUR?</h1>
+                  <h1 class="text-primary">VOUS ETES DEVELOPPEUR, WEBMASTER? VOULEZ-VOUS AIDER, CONTRIBUEZ?</h1>
                   <p>Si vous pensez être capable de nous aider à améliorer le projet par tout les moyens possibles, merci de nous contacter via mail: <span class="bold italic text-bold">geeks@acem.tech</span>.<br>
                   Etant un projet purement open source, vous pourrez contribuer au<a href="https://github.com/acemtech/acemtech"> projet sur GitHub</a>.<br>
                   Vous pouvez lire les détails concernant comment y contribuer sur ce <a href="http://acem.tech/posts/article/2">lien</a>.</p>
