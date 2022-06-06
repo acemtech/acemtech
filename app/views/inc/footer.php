@@ -11,8 +11,8 @@
               <li><a href="https://github.com/acemtech/">Voir nos projets</a></li>
               <li><a href="https://ambacom-maroc.com/">Ambassade de l'Union des Comores au Maroc</a></li>
               <li><a href="https://www.facebook.com/BEacem">Bureau Exécutif</a></li>
-              <li><a href="http://acem.tech/posts/article/2">Acem Tech</a></li>
-              <li><a href="http://acem.tech/utilisateurs/connexion">Publier un article</a></li>
+              <li><a href="<?php echo URLROOT; ?>/posts/article/2">Acem Tech</a></li>
+              <li><a href="<?php echo URLROOT; ?>/utilisateurs/connexion">Publier un article</a></li>
             </ul>
           </div>
           <div>
