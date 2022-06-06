@@ -14,15 +14,16 @@ showTitle($view); ?></title>
     />
     <meta
       name="keywords"
-      content="association des comoriens etudiants au Maroc, acem fes, comoriens de fes, acemfes, etudiants comoriens, lauréats comoriens, licence, master, Comoros, Maroc"
+      content="ACEM, ACEM TECH, ACEMTECH, association des comoriens etudiant au Maroc, acem fes, comoriens de fes, acemfes, etudiants comoriens, lauréats comoriens, licence, master, Comores, Maroc"
     />
     <meta name="author" content="ACEM TECH"/>
     <!-- Facebook and Twitter integration -->
-    <meta property="og:title" content="" />
-    <meta property="og:image" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:site_name" content="" />
-    <meta property="og:description" content="" />
+    <meta property="og:title" content="ACEM TECH - L'actualité de l'étudiant comorien au Maroc mais pas que" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="<?php echo URLROOT; ?>/storage/<?php echo FILENAME; ?>" />
+    <meta property="og:url" content="<?php echo URLROOT; ?>" />
+    <meta property="og:site_name" content="ACEM TECH" />
+    <meta property="og:description" content="Une solution innovante dans le simple but de garantir l’enrichissement et la valorisation des projets innovants, de cultiver l’esprit d’innovation, développer et faciliter l’esprit d’épanouissement." />
     <meta name="twitter:title" content="" />
     <meta name="twitter:image" content="" />
     <meta name="twitter:url" content="" />
