@@ -68,10 +68,10 @@
 
             <div class="sidebar">
             <?php 
-                require APPROOT . '/views/inc/categorie.php'; 
-                require APPROOT . '/views/inc/smedia.php'; 
-            ?>
-            
+              require APPROOT . '/views/inc/categorie.php';
+              require APPRPPT . '/views/inc/smedia.php';
+              
+           ?>
             </div>
         </div>
     </div>

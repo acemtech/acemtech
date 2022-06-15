@@ -63,9 +63,8 @@
                 </p>
                 <a href="#" class="btn btn-block btn-secondary">Contribuez</a>
               </article>
-              
-              <?php require_once APPROOT . '/views/inc/smedia.php'; ?>
-            
+
+              <?php require APPROOT . '/views/inc/smedia.php'; ?>
             </div>
           </div>
         </div>

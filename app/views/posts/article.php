@@ -48,12 +48,11 @@
             </article>
 
             <div class="sidebar">
-            <?php 
-                require APPROOT . '/views/inc/categorie.php'; 
-                require APPROOT .  '/views/inc/smedia.php';
-            ?>
-
-                
+              <?php
+              	require APPROOT . '/views/inc/categorie.php'; 
+              	require APPROOT . '/views/inc/smedia.php';
+              
+              ?>
               
             </div>
         </div>
