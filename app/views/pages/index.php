@@ -34,7 +34,7 @@
                                     <p>
                                         <?php echo limit_text($post->body, 30); ?>
                                     </p>
-                                     <small>Par <a href="<?php echo URLROOT; ?>/utilisateurs/profile/<?php echo $post->user_id; ?>"><strong class="italic"><?php echo $post->firstname .' '. $post->lastname; ?></strong></a>, <?php formatDate($post->published_at); ?></small>
+                                     <small>Par <a href="<?php echo URLROOT; ?>/utilisateurs/profile/<?php echo $post->user_id; ?>"><strong><?php echo $post->firstname .' '. $post->lastname; ?></strong></a>, le<span class ="italic"> <?php formatDate($post->published_at); ?></span></small>
                                 </div>
                             </article>
                         <?php } else { ?>
@@ -45,7 +45,7 @@
                                     <p>
                                         <?php echo limit_text($post->body, 30);?>
                                     </p>
-                                    <small>Par <a href="<?php echo URLROOT; ?>/utilisateurs/profile/<?php echo $post->user_id; ?>"><strong class="italic"><?php echo $post->firstname .' '. $post->lastname; ?></strong></a>, <?php formatDate($post->published_at); ?></small>
+                                    <small>Par <a href="<?php echo URLROOT; ?>/utilisateurs/profile/<?php echo $post->user_id; ?>"><strong><?php echo $post->firstname .' '. $post->lastname; ?></strong></a>, le <span class="italic"> <?php formatDate($post->published_at); ?></span></small>
                                 </div>
                                 <div class="card-bkgd-image" style='background-image: url("<?php echo URLROOT; ?>/storage/posts/<?php echo $post->img_name; ?>")'></div>
 
@@ -60,8 +60,8 @@
                     } ?>
                 <?php if( count($data['posts']) > 5 ) : ?>
                 <div id="pagination-button" class="text-center py-1">
-                   <a href="javascript:void(0)" style="cursor: default;" title="précédent"><i class="fas fa-arrow-circle-left"></i></a>
-                    <a href="<?php echo URLROOT; ?>/accueil/page/2" method="post" id="pagination-form" title="suivant"><i class="fas fa-arrow-circle-right"></i></a>
+                   <!-- <a href="javascript:void(0)" style="cursor: default;" title="précédent"><i class="fas fa-arrow-circle-left"></i></a> -->
+                    <a href="<?php echo URLROOT; ?>/accueil/page/2" method="post" id="pagination-form" title="suivant"><i class="fa fa-angle-double-right"  aria-hidden="true"></i></a>
                 </div>
                 <?php endif; ?>
             </div>
@@ -70,7 +70,7 @@
             <div class="sidebar">
                 <article class="card bg-dark">
                     <div class="category category-alaune">A La Une</div>
-                    <h3 class="article-heading"><a href="https://ambacom-maroc.com/ambassadeur/">Ouverture de l'ambassade</a></h3>
+                    <h3 class="article-heading"><a href="https://ambacom-maroc.com/ambassadeur/" target="_blank">Ouverture de l'ambassade</a></h3>
                     <p>
                     L’Ambassade de l’Union des Comores au Maroc a été inaugurée, lundi 26 octobre 2020, lors d’une cérémonie organisée à Rabat.
                     Cette cérémonie a été présidée par le Ministre des Affaires Etrangères, de la Coopération Africaine et des Marocains 
@@ -85,7 +85,7 @@
                     La principale mission du Consulat Général de l’Union des Comores dans la Région Laayoune Sakia El Hamra est de :  
                       recenser et d’immatriculer les ressortissants comoriens résidant dans cette région marocaine ; 
                       de délivrer aux ressortissants comoriens ayant droit des documents de voyage, d’identité et d’acte d’état civil ;
-                      <a href="https://ambacom-maroc.com/ova_sev/consulat-general-a-laayoune/">Voir plus</a>
+                      <a href="https://ambacom-maroc.com/ova_sev/consulat-general-a-laayoune/" target="_blank">Voir plus</a>
                   </p>
                 </article>
             </div>

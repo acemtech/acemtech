@@ -35,7 +35,7 @@ class Accueil extends Controller {
             // Total posts in databse
             $nb_posts = (int) $this->accueilModel->nbrOfRows();
             // Post number per page
-            $nbr_post_page = 6;
+            $nbr_post_page = 5;
             // Total of pages
             $total_pages = ceil($nb_posts / $nbr_post_page);
             // First page
