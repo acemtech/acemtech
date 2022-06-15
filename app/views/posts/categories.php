@@ -42,9 +42,9 @@
                     <ul class="list">
                         <li><a href="<?php echo URLROOT; ?>/posts/categorie/festivites"><i class="fa fa-chevron-right"></i> Festivités</a></li>
                         <li><a href="<?php echo URLROOT; ?>/posts/categorie/be"><i class="fa fa-chevron-right"></i> Bureau Exécutif</a></li>
-                        <li><a href="<?php echo URLROOT; ?>/posts/categorie/innovations"><i class="fa fa-chevron-right"></i> Innovations</a></li>
                         <li><a href="<?php echo URLROOT; ?>/posts/categorie/Projet"><i class="fa fa-chevron-right"></i> Projets</a></li>
-                        <li><a href="<?php echo URLROOT; ?>/posts/categorie/Nouveautes"><i class="fa fa-chevron-right"></i> Nouveautés</a></li>
+                      	<li><a href="<?php echo URLROOT; ?>/posts/categorie/innovations"><i class="fa fa-chevron-right"></i> Innovations</a></li>
+                        <li><a href="<?php echo URLROOT; ?>/posts/categorie/Archives"><i class="fa fa-chevron-right"></i> Archives</a></li>
                     </ul>
                 </article>
 

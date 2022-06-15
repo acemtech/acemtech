@@ -10,7 +10,7 @@
             <ul class="list">
               <li><a href="https://github.com/acemtech/" target="_blank">Voir nos projets</a></li>
               <li><a href="https://ambacom-maroc.com/" target="_blank">Ambassade de l'Union des Comores au Maroc</a></li>
-              <li><a href="acem-officiel.com" target="_blank">Bureau Exécutif</a></li>
+              <li><a href="http://acem-officiel.com" target="_blank">ACEM Site Officiel</a></li>
               <li><a href="<?php echo URLROOT; ?>/posts/article/2">Acem Tech</a></li>
               <li><a href="<?php echo URLROOT; ?>/utilisateurs/connexion">Publier un article</a></li>
             </ul>
