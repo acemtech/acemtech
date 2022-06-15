@@ -62,6 +62,20 @@ function colors_category($category_name) {
     }
 }
 
+// OG description display
+function og_desc_display() {
+	if (!empty($data[post])) { 
+      
+      echo limit_text($data[post]->body, 28); 
+    
+    } else { 
+      
+      echo "Solution innovante favorisant l’enrichissement et la valorisation des projets innovants, 
+      cultivation d' esprit d’innovation, tout en facilitant l’esprit d’épanouissement.";
+    
+    }
+}
+
 function formatDate($date) {
   	
   	//$dt = DateTime::createFromFormat('!Y-m-d H:i:s', $date)->format('d M Y');

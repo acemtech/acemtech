@@ -21,6 +21,12 @@
                         </form>
                     </div>
                     <?php endif; ?>
+                  
+                  	<!-- Your share button code -->
+                        <div class="fb-share-button" 
+                        data-href="<?php echo URLROOT; ?>/posts/article/<?php echo $data['post']->post_id; ?>" 
+                        data-layout="button_count">
+                        </div>
 
                     <div class="category <?php colors_category($data['post']->category);?>"><?php echo $data['post']->category; ?></div>
                 </div>
