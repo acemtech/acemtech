@@ -28,7 +28,7 @@
 
           <div class="author-copyright">
             <p><small>Copyright &copy; 2021, Tous droits reservés<sup>&reg;</sup></small></a></p>
-            <p><small>Designed and Coded with <i class="fas fa-heart"></i> by <a href="http://acem.tech/">ACEM TECH</a></small></p>
+            <p><small>Designed and Coded with <i class="fas fa-heart"></i> by <a href="http://acemtech.org/">ACEM TECH</a></small></p>
           </div>
         </div>
       </footer>
