@@ -71,6 +71,7 @@ class Posts extends Controller
                 $data = [
                     'user_id'       =>'',
                     'title'         => trim($_POST['title']),
+                  	'intro'			=> trim($_POST['intro']),
                     'category'      => trim($_POST['categories']),
                     'body'          => $content,
                     'desc-img'      => trim($_POST['desc_img']),
@@ -84,6 +85,9 @@ class Posts extends Controller
                 if(empty($data['title'])) {
                     $data['title_err'] = 'Champ obligatoire';
                 }
+              	if(empty($data['intro'])) {
+                    $data['intro_err'] = 'Champ obligatoire';
+                }
 
                 if(empty($data['category'])){
                     $data['category_err'] = 'Champ obligatoire';
@@ -95,7 +99,7 @@ class Posts extends Controller
                 if(empty($data['filename'])){
                     $data['filename_err'] = 'Veuillez inclure une image';
                 }
-                if(empty($data['title_err']) && empty($data['category_err']) && empty($data['body_err']) && empty($data['filename_err']) && !empty($data['desc-img'])) {
+                if(empty($data['title_err'])  && empty($data['intro_err']) && empty($data['category_err']) && empty($data['body_err']) && empty($data['filename_err']) && !empty($data['desc-img'])) {
 //                    Handling store image errors
                     // Check if file was uploaded without errors
                     if(isset($_FILES["img_article"]) && $_FILES["img_article"]["error"] == 0){
@@ -170,6 +174,7 @@ class Posts extends Controller
                     'desc_img'      => '',
                     'filename'      => '',
                     'title_err'     => '',
+                  	'intro_err'		=> '',
                     'category_err'  => '',
                     'body_err'      => '',
                     'filename_err'  => ''
@@ -192,12 +197,14 @@ class Posts extends Controller
                 $data = [
                     'id' => $id,
                     'title' => trim($_POST['title']),
+                  	'intro' => trim($_POST['intro']),
                     'desc_img' => trim($_POST['desc_img']),
                     'filename' => $filename,
                     'old_img' => trim($_POST['old_img']),
                     'category' => trim($_POST['categories']),
                     'body' => $content,
                     'title_error' => '',
+                  	'intro_error' => '',
                     'filename_err' => '',
                     'category_error' => '',
                     'body_error' => ''
@@ -205,6 +212,10 @@ class Posts extends Controller
 
                 if (empty($data['title'])) {
                     $data['title_error'] = 'Saisissez une titre';
+                }
+              
+              	if (empty($data['intro'])) {
+                    $data['intro_error'] = 'Saisissez un intro';
                 }
 
                 if (empty($data['body'])) {
@@ -215,7 +226,7 @@ class Posts extends Controller
                 }
 
                 // Make sure no errors left
-                if (empty($data['title_error']) && empty($data['filename']) && empty($data['body_error']) && empty($data['category_error']) && empty($data['filename'])) {
+                if (empty($data['title_error']) && empty($data['intro_error']) && empty($data['body_error']) && empty($data['category_error']) && empty($data['filename'])) {
                     if ($this->postModel->updatePostNoImage($data)) {
                         flash('post_update_success', 'Votre poste a été mis à jour');
                         redirect('posts/dashboard');
@@ -287,6 +298,7 @@ class Posts extends Controller
                 $data = [
                     'id' => $id,
                     'post' => $post,
+                  	'intro_error' => '',
                     'body_error' => '',
                     'title_error' => '',
                     'category_error' => '',

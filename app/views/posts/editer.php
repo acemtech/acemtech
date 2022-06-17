@@ -27,11 +27,19 @@
                         <label for="img-desc"><smal>Description de l'image(Facultatif)</smal></label>
                         <input type="text" name="desc_img" value="<?php echo (!empty($data['post']->desc_img)) ? $data['post']->desc_img : $data['desc_img'];?>" placeholder="Description de l'image(Facultatif)">
                     </div>
-                    <span class="invalid-feedback"><?php echo $data['title_error'] ? $data['title_error'] : ''; ?></span>
-                    <div class="form-group">
+                    
+                  <span class="invalid-feedback"><?php echo $data['title_error'] ? $data['title_error'] : ''; ?></span>
+                    <div class="form-group mb-1">
                         <labe for="title">Titre</labe>
-                        <input type="text" name="title" id="title" value="<?php echo (!empty($data['post']->title)) ? $data['post']->title : $data['title']; ?>">
-                    </div>
+                        <input type="text" name="title" id="title" value="<?php echo (!empty($data['post']->title)) ? $data['post']->title : $data['title']; ?>">  
+                  	</div>
+                  	
+                  <span class="invalid-feedback"><?php echo $data['intro_error']; ?></span>
+                  	<div class="form-group mb-1">
+                        <labe for="title">Intro</labe>
+                        <textarea class="intro-txtarea" cols="" rows="5" name="intro" id="intro"><?php echo (!empty($data['post']->intro)) ? $data['post']->intro : $data['intro']; ?></textarea>
+              			<small class="italic">Soyez précis et concis! Ce texte s'affiche dans les réseaux sociaux et dans l'accueil d'ACEM TECH! Inciter le lecteur à lire votre article au complet</small>  
+                  </div>
                     <div class="py-1 form-group">
                         <label for="category">Catégories</label>
                         <select name="categories" id="category">
@@ -47,7 +55,7 @@
                 <span class="invalid-feedback"><?php echo $data['body_error'] ? $data['body_error'] : ''; ?></span>
                 <div class="form-group">
                     <textarea name="body" id="editor1" cols="80" rows="20" placeholder="article message">
-                        <?php if(!empty($data['post']->body)) echo $data['post']->body; ?>
+                        <?php echo $data['post']->body; ?>
                     </textarea>
 
                 </div>
@@ -67,11 +75,13 @@
             </article>
 
             <div class="sidebar">
-            <?php 
-              require APPROOT . '/views/inc/categorie.php';
-              require APPRPPT . '/views/inc/smedia.php';
+                <?php 
+              		require APPROOT . '/views/inc/categorie.php';
+              		require APPROOT . '/views/inc/smedia.php';
               
-           ?>
+              	?>
+
+                
             </div>
         </div>
     </div>

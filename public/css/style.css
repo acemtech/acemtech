@@ -873,7 +873,7 @@ textarea::placeholder {
 }
 
 .container .article-container article p {
-  margin-bottom: 0;
+  margin-bottom: 9px;
 }
 
 .article-container .card.bg-dark {
@@ -1268,6 +1268,14 @@ textarea::placeholder {
 
 #editpost-form .form-group textarea {
   height: 500px;
+}
+
+#editpost-form .form-group textarea.intro-txtarea {
+	border: solid 1px var(--secondary-color);
+  	font-family: inherit;
+  	font-size: inherit;
+  	padding: 5px;
+  	height: 60px;
 }
 
 #editpost-form .form-group input[type='submit']{

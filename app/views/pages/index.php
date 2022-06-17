@@ -32,7 +32,9 @@
                                     <div class="category <?php colors_category($post->category);?>"><?php echo $post->category; ?></div>
                                     <h3 class="article-heading"><a href="<?php echo URLROOT; ?>/posts/article/<?php echo $post->post_id; ?>"><?php echo $post->title; ?></a></h3>
                                     <p>
-                                        <?php echo limit_text($post->body, 30); ?>
+                                        <?php 
+                                          		echo $post->intro;
+                                          //echo limit_text($post->body, 30); ?>
                                     </p>
                                      <small>Par <a href="<?php echo URLROOT; ?>/utilisateurs/profile/<?php echo $post->user_id; ?>"><strong><?php echo $post->firstname .' '. $post->lastname; ?></strong></a>, le<span class ="italic"> <?php formatDate($post->published_at); ?></span></small>
                                 </div>
@@ -43,7 +45,9 @@
                                     <div class="category <?php colors_category($post->category);?>"><?php echo $post->category; ?></div>
                                     <h3 class="article-heading"><a href="<?php echo URLROOT; ?>/posts/article/<?php echo $post->post_id; ?>"><?php echo $post->title; ?></a></h3>
                                     <p>
-                                        <?php echo limit_text($post->body, 30);?>
+                                        <?php 
+                                      			echo $post->intro;
+                                      //echo limit_text($post->body, 30);?>
                                     </p>
                                     <small>Par <a href="<?php echo URLROOT; ?>/utilisateurs/profile/<?php echo $post->user_id; ?>"><strong><?php echo $post->firstname .' '. $post->lastname; ?></strong></a>, le <span class="italic"> <?php formatDate($post->published_at); ?></span></small>
                                 </div>

@@ -56,6 +56,8 @@ CKEDITOR.editorConfig = function( config ) {
 
 	// Show player controls
 	config.youtube_controls = true;
-  
-  	config.allowedContent = true;
+
+	// Read embedded media on editing an article
+	config.allowedContent = true;
+
 };

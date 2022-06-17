@@ -14,10 +14,11 @@ class Post
     }
 
     public function addPost($data){
-        $this->db->query('INSERT INTO posts(post_id, user_id, title, body, category, img_name, desc_img) VALUES(NULL,:user_id, :title, :body, :category, :img_name, :desc_img)');
+        $this->db->query('INSERT INTO posts(post_id, user_id, title, intro, body, category, img_name, desc_img) VALUES(NULL,:user_id, :title, :intro, :body, :category, :img_name, :desc_img)');
 
         $this->db->bind(':user_id', $data['user_id']);
         $this->db->bind(':title', $data['title']);
+      	$this->db->bind(':intro', $data['intro']);
         $this->db->bind(':category', $data['category']);
         $this->db->bind(':body', $data['body']);
         $this->db->bind(':img_name', $data['filename']);
@@ -31,9 +32,10 @@ class Post
     }
 
     public function editerPost($data){
-        $this->db->query("UPDATE posts SET title = :title, body = :body, category = :category, img_name = :img_name, desc_img = :desc_img WHERE post_id = :id");
+        $this->db->query("UPDATE posts SET title = :title, intro = :intro, body = :body, category = :category, img_name = :img_name, desc_img = :desc_img WHERE post_id = :id");
 
         $this->db->bind(':title', $data['title']);
+      	 $this->db->bind(':intro', $data['intro']);
         $this->db->bind(':body', $data['body']);
         $this->db->bind(':category', $data['category']);
         $this->db->bind(':id', $data['id']);
@@ -48,9 +50,10 @@ class Post
     }
 
     public function updatePostNoImage($data){
-        $this->db->query("UPDATE posts SET title = :title, body = :body, category = :category, desc_img = :desc_img WHERE post_id = :id");
+        $this->db->query("UPDATE posts SET title = :title, intro = :intro, body = :body, category = :category, desc_img = :desc_img WHERE post_id = :id");
 
         $this->db->bind(':title', $data['title']);
+      	$this->db->bind(':intro', $data['intro']);
         $this->db->bind(':body', $data['body']);
         $this->db->bind(':category', $data['category']);
         $this->db->bind(':id', $data['id']);
