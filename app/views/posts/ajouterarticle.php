@@ -13,8 +13,16 @@
             <?php flash('file_exist_error'); ?>
             <div class="form-group">
                 <input type="text" name="title" placeholder="Title" value="<?php echo $data['title'] ? $data['title'] : '';?>">
+              	<small class="italic">Evitez les accents, le titre s'affiche toujours en majuscule</small><br>
                 <span class="invalid-feedback"><?php echo $data['title_err']; ?></span>
             </div>
+          
+         	<div class="form-group">
+                <input type="text" name="intro" placeholder="Resumé de l'article en 30 mots, sois deux phraes" value="<?php echo $data['intro'] ? $data['intro'] : '';?>">
+                <span class="invalid-feedback"><?php echo $data['intro_err']; ?></span>
+              <small class="italic">Soyez précis et concis! Ce texte s'affiche dans les réseaux sociaux et dans l'accueil d'ACEM TECH! Inciter le lecteur à lire votre article au complet.</small>
+            </div>
+          	<br>
             <div class="form-group">
                 <label for="category">Choisir une catégorie</label>
                 <select name="categories" id="category">

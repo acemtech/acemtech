@@ -2,15 +2,15 @@
         <div class="container footer-container">
           <div class="acem-fes-news-about">
             <img src="<?php echo URLROOT; ?>/public/images/logo.png" alt="" class="logo">
-            <p>L’ACEM TECH est une solution innovante proposée par le Club Académique et Scientifique de l’ACEM de Fès à l’intention de garantir l’enrichissement et la valorisation des projets innovants, de cultiver l’esprit d’innovation, développer et faciliter l’esprit d’épanouissement.</p>
+            <p>L’ACEM TECH est une solution innovante dont le simple but est de garantir l’enrichissement et la valorisation des projets innovants, de cultiver l’esprit d’innovation, développer et faciliter l’esprit d’épanouissement.</p>
           </div>
 
           <div class="acemfes-site-map">
             <h4>LIEN UTILES</h4>
             <ul class="list">
-              <li><a href="https://github.com/acemtech/">Voir nos projets</a></li>
-              <li><a href="https://ambacom-maroc.com/">Ambassade de l'Union des Comores au Maroc</a></li>
-              <li><a href="https://www.facebook.com/BEacem">Bureau Exécutif</a></li>
+              <li><a href="https://github.com/acemtech/" target="_blank">Voir nos projets</a></li>
+              <li><a href="https://ambacom-maroc.com/" target="_blank">Ambassade de l'Union des Comores au Maroc</a></li>
+              <li><a href="http://acem-officiel.com" target="_blank">ACEM Site Officiel</a></li>
               <li><a href="<?php echo URLROOT; ?>/posts/article/2">Acem Tech</a></li>
               <li><a href="<?php echo URLROOT; ?>/utilisateurs/connexion">Publier un article</a></li>
             </ul>
@@ -28,15 +28,26 @@
 
           <div class="author-copyright">
             <p><small>Copyright &copy; 2021, Tous droits reservés<sup>&reg;</sup></small></a></p>
-            <p><small>Designed and Coded with <i class="fas fa-heart"></i> by <a href="http://acem.tech/">ACEM TECH</a></small></p>
+            <p><small>Designed and Coded with <i class="fas fa-heart"></i> by <a href="http://acemtech.org/">ACEM TECH</a></small></p>
           </div>
         </div>
       </footer>
-        <?php if($view == 'posts/ajouterarticle' || $view == 'posts/editer') : ?>
+	  <!-- Load Facebook SDK for JavaScript -->
+      <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v3.0";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+     
+     <?php if($view == 'posts/ajouterarticle' || $view == 'posts/editer') : ?>
       <script src="<?php echo URLROOT; ?>/public/js/ckeditor/ckeditor.js"></script>                             <script src="<?php echo URLROOT; ?>/public/js/script.js"></script>
       <script>
           CKEDITOR.replace( 'editor1' );
       </script>
         <?php endif; ?>
+	  
   </body>
   </html>

@@ -23,30 +23,30 @@
                     foreach($data['posts'] as $post) :
                         if($post->counter %2 != 0)  { ?>
 
-                            <article class="card bg-light">
+                              <article class="card bg-light">
                                 <div class="card-bkgd-image" style='background-image: url("<?php echo URLROOT; ?>/storage/posts/<?php echo $post->img_name; ?>")'></div>
-                                <div>
+                                 <div>
                                     <div class="category <?php colors_category($post->category);?>"><?php echo $post->category; ?></div>
-                                    <h3 class="article-heading"><a href="<?php echo URLROOT; ?>/posts/article/<?php echo $post->post_id; ?>"><?php echo $post->title; ?></a></h3>
+                                    <h3 class="article-heading"><a href="<?php echo URLROOT; ?>/posts/article/<?php echo $post->post_id; ?>/<?php echo formatUrl($post->title); ?>"><?php echo $post->title; ?></a></h3>
                                     <p>
-                                        <?php $str = strip_tags($post->body);
-                                        echo word_count($str);
-                                        ?>
+                                        <?php 
+                                                     echo $post->intro;
+                                                     //echo limit_text($post->body, 30); ?>
                                     </p>
-                                    <small>By <a href="<?php echo URLROOT; ?>/utilisateurs/profile/<?php echo $post->user_id; ?>"><strong class="italic"><?php echo $post->firstname .' '. $post->lastname; ?></strong></a>, <?php formatDate($post->published_at); ?></small>
+                                     <small>Par <a href="<?php echo URLROOT; ?>/utilisateurs/profile/<?php echo $post->user_id; ?>"><strong class="italic"><?php echo $post->firstname .' '. $post->lastname; ?></strong></a>, <?php formatDate($post->published_at); ?></small>
                                 </div>
                             </article>
                         <?php } else { ?>
                             <article class="card bg-light">
                                 <div>
                                     <div class="category <?php colors_category($post->category);?>"><?php echo $post->category; ?></div>
-                                    <h3 class="article-heading"><a href="<?php echo URLROOT; ?>/posts/article/<?php echo $post->post_id; ?>"><?php echo $post->title; ?></a></h3>
+                                    <h3 class="article-heading"><a href="<?php echo URLROOT; ?>/posts/article/<?php echo $post->post_id; ?>/<?php echo formatUrl($post->title); ?>"><?php echo $post->title; ?></a></h3>
                                     <p>
-                                        <?php $str = strip_tags($post->body);
-                                        echo word_count($str);
-                                        ?>
+                                        <?php 
+                                      		echo $post->intro;
+                                      	//echo limit_text($post->body, 30);?>
                                     </p>
-                                    <small>By <a href="<?php echo URLROOT; ?>/utilisateurs/profile/<?php echo $post->user_id; ?>"><strong class="italic"><?php echo $post->firstname .' '. $post->lastname; ?></strong></a>, <?php formatDate($post->published_at); ?></small>
+                                    <small>Par <a href="<?php echo URLROOT; ?>/utilisateurs/profile/<?php echo $post->user_id; ?>"><strong class="italic"><?php echo $post->firstname .' '. $post->lastname; ?></strong></a>, <?php formatDate($post->published_at); ?></small>
                                 </div>
                                 <div class="card-bkgd-image" style='background-image: url("<?php echo URLROOT; ?>/storage/posts/<?php echo $post->img_name; ?>")'></div>
 
@@ -58,12 +58,12 @@
                         <?php if($data['current_page'] > 2) { ?>
                              <a href="<?php echo URLROOT; ?>/accueil/page/<?php echo $data['current_page'] - 1;?>" title="précédent"><i class="fas fa-arrow-circle-left"></i></a>
                         <?php } else if($data['current_page'] == 2){ ?>
-                            <a href="<?php echo URLROOT; ?>/accueil/" title="accueil"><i class="fas fa-arrow-circle-left"></i></a>
+                            <a href="<?php echo URLROOT; ?>/accueil/" title="accueil"><i class="fa fa-angle-double-left"></i></a>
 
                         <?php } if($data['current_page'] < $data['total_pages']){ ?>
-                        <a href="<?php echo URLROOT; ?>/accueil/page/<?php echo $data['current_page'] + 1 ;?>" title="suivant"><i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="<?php echo URLROOT; ?>/accueil/page/<?php echo $data['current_page'] + 1 ;?>" title="suivant"><i class="fa fa-angle-double-right"></i></a>
                        <?php   } else if($data['current_page'] == $data['total_pages']){ ?>
-                    <a href="javascript:void(0)" title="page finale"><i class="fas fa-arrow-circle-right"></i></a>
+                    <!--<a href="javascript:void(0)" title="Aucune page"><i class="fas fa-arrow-circle-right"></i></a>-->
                     <?php } ?>
                 </div>
             </div>
@@ -71,40 +71,24 @@
 
             <div class="sidebar">
                 <article class="card bg-dark">
-                    <div class="category category-communiques">Communique</div>
-                    <h3 class="article-heading"><a href="article.html">Mot du SG de l'ACEM FES</a></h3>
+                    <div class="category category-alaune">A La Une</div>
+                    <h3 class="article-heading"><a href="https://ambacom-maroc.com/ambassadeur/" target="_blank">Ouverture de l'ambassade</a></h3>
                     <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Consectetur ut fugiat officiis laborum architecto, labore natus
-                        eveniet eos ullam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci amet aspernatur consequatur dolore eaque.
+                    L’Ambassade de l’Union des Comores au Maroc a été inaugurée, lundi 26 octobre 2020, lors d’une cérémonie organisée à Rabat.
+                    Cette cérémonie a été présidée par le Ministre des Affaires Etrangères, de la Coopération Africaine et des Marocains 
+                    Résidant à l’Etranger, S.E.M. Nasser Bourita et son homologue comorien, S.E.M. Dhoihir Dhoulkam. <a href="https://ambacom-maroc.com/ambassadeur/">Lire plus...</a>
                     </p>
                 </article>
                 <article class="card bg-light">
-                    <div class="category category-alaune">A La Une</div>
-                    <img src="<?php echo URLROOT; ?>/public/images/publicites/elosig.png" alt="">
-                    <h3 class="article-heading"><a href="article.html">Elosig: Inscription ouvertes</a></h3>
+                    <div class="category category-communiques">Communiqués</div>
+                   <!-- <img src="<?php echo URLROOT; ?>/public/images/publicites/elosig.png" alt="">-->
+                    <h3 class="article-heading"><a href="https://ambacom-maroc.com/ova_sev/consulat-general-a-laayoune/">Consulat Général à Laayoune</a></h3>
                     <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Consectetur ut fugiat officiis laborum architecto.
-                    </p>
-                </article>
-                <article class="card bg-dark">
-                    <div class="category category-communiques">Bureau Executif</div>
-                    <h3 class="article-heading"><a href="article.html">Mot du President de l'ACEM</a></h3>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Consectetur ut fugiat officiis laborum architecto, labore natus
-                        eveniet eos ullam assumenda! Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    </p>
-                </article>
-                <article class="card bg-light">
-                    <div class="category category-alaune">A La Une</div>
-                    <img src="<?php echo URLROOT; ?>/public/images/publicites/webhelp.png" alt="">
-                    <h3 class="article-heading"><a href="article.html">WebHelp Recrute</a></h3>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Consectetur ut fugiat officiis.
-                    </p>
+                    La principale mission du Consulat Général de l’Union des Comores dans la Région Laayoune Sakia El Hamra est de :  
+                      recenser et d’immatriculer les ressortissants comoriens résidant dans cette région marocaine ; 
+                      de délivrer aux ressortissants comoriens ayant droit des documents de voyage, d’identité et d’acte d’état civil ;
+                      <a href="https://ambacom-maroc.com/ova_sev/consulat-general-a-laayoune/" target="_blank">Voir plus</a>
+                  </p>
                 </article>
             </div>
 

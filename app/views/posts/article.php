@@ -5,12 +5,16 @@
     <div class="container">
         <div class="page-container">
             <article class="card bg-light">
+              	<?php
+                	flash('no_post_error');
+                	flash('post_update_success');
+                  ?>
                 <div class="bkgd-cover-image" style='background-image: url("<?php echo URLROOT; ?>/storage/posts/<?php echo $data['post']->img_name; ?>")'></div>
                 <span><small class="italic"><?php echo $data['post']->desc_img; ?></small></span>
                 <h1 class="l-heading"><?php echo $data['post']->title; ?></h1>
                 <div class="meta">
                     <small>
-                        <i class="fas fa-user"></i>Ecrit par <span class="text-bold"><?php echo $data['user']->firstname . ' ' . $data['user']->lastname;?></span><span class="hide">, <span class="date"><?php formatDateMin($data['post']->published_at); ?></span></span>
+                        <i class="fas fa-user"></i>Ecrit par <span class="text-bold"><a href="<?php echo URLROOT; ?>/utilisateurs/profile/<?php echo $data['user']->id; ?>"><?php echo $data['user']->firstname . ' ' . $data['user']->lastname;?></a></span><span class="hide">, <span class="date"><?php formatDateMin($data['post']->published_at); ?></span></span>
                     </small>
                     <!-- SHOW BUTTONS IF USER IS LOGGED IN -->
                     <?php if(!empty($_SESSION['user_id']) && $data['user']->id == $_SESSION['user_id']) : ?>
@@ -21,6 +25,13 @@
                         </form>
                     </div>
                     <?php endif; ?>
+                  
+                  	<!-- Your share button code -->
+                        <div class="fb-share-button" 
+                        data-href="<?php echo URLROOT; ?>/posts/article/<?php echo $data['post']->post_id; ?>/<?php echo formatUrl($data['post']->title);?>" 
+                        data-layout="button_count">
+                        </div>
+                  		<div id="fb-root"></div>
 
                     <div class="category <?php colors_category($data['post']->category);?>"><?php echo $data['post']->category; ?></div>
                 </div>
@@ -42,29 +53,11 @@
             </article>
 
             <div class="sidebar">
-                <article class="card bg-light">
-                    <h3 class="article-heading text-capitalize"><a>Catégories</a></h3>
-                    <ul class="list">
-                        <li><a href="<?php echo URLROOT; ?>/posts/categorie/festivites"><i class="fa fa-chevron-right"></i> Festivités</a></li>
-                        <li><a href="<?php echo URLROOT; ?>/posts/categorie/be"><i class="fa fa-chevron-right"></i> Bureau Exécutif</a></li>
-                        <li><a href="<?php echo URLROOT; ?>/posts/categorie/innovations"><i class="fa fa-chevron-right"></i> Innovations</a></li>
-                        <li><a href="<?php echo URLROOT; ?>/posts/categorie/Projet"><i class="fa fa-chevron-right"></i> Projets</a></li>
-                        <li><a href="<?php echo URLROOT; ?>/posts/categorie/Nouveautes"><i class="fa fa-chevron-right"></i> Nouveautés</a></li>
-                    </ul>
-                </article>
-
-                <article class="card bg-dark">
-                <div class="category category-communiques">Reseaux Sociaux</div>
-                <h3 class="article-heading"><a href="article.html">Nous suivre</a></h3>
-                <p> <a href="https://www.facebook.com/BEacem"><i class="fab fa-facebook"></i> Bureau Exécutif de l'ACEM</a></p>
-                <p> <a href="https://www.facebook.com/groups/acemfesofficiel"><i class="fab fa-facebook"></i> Notre groupe facebook</a></p>
-                <p> <a href="https://www.facebook.com/Club-Acad%C3%A9mique-et-Scientifique-de-F%C3%A8s-100234075423739"><i class="fab fa-facebook"></i> Page facebook du club</a></p>
-                <p><a href="https://www.youtube.com/channel/UCfKd1nKGbQvt2PzRA2p9v4w"><i class="fab fa-youtube"></i> ACEM FES Officielle</a></p>
-                <p><a href="https://www.instagram.com/acem_fes/"><i class="fab fa-instagram"></i> acem_fes</a></p>
-
-                <h3 class="article-heading"><a href="article.html">Nous ecrire</a></h3>
-                <p><a href=""><i class="fas fa-globe-africa"></i> geeks@acem.tech</a></p>
-              </article>
+              <?php
+              	require APPROOT . '/views/inc/categorie.php'; 
+              	require APPROOT . '/views/inc/smedia.php';
+              
+              ?>
               
             </div>
         </div>
