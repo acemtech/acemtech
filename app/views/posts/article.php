@@ -5,12 +5,16 @@
     <div class="container">
         <div class="page-container">
             <article class="card bg-light">
+              	<?php
+                	flash('no_post_error');
+                	flash('post_update_success');
+                  ?>
                 <div class="bkgd-cover-image" style='background-image: url("<?php echo URLROOT; ?>/storage/posts/<?php echo $data['post']->img_name; ?>")'></div>
                 <span><small class="italic"><?php echo $data['post']->desc_img; ?></small></span>
                 <h1 class="l-heading"><?php echo $data['post']->title; ?></h1>
                 <div class="meta">
                     <small>
-                        <i class="fas fa-user"></i>Ecrit par <span class="text-bold"><?php echo $data['user']->firstname . ' ' . $data['user']->lastname;?></span><span class="hide">, <span class="date"><?php formatDateMin($data['post']->published_at); ?></span></span>
+                        <i class="fas fa-user"></i>Ecrit par <span class="text-bold"><a href="<?php echo URLROOT; ?>/utilisateurs/profile/<?php echo $data['user']->id; ?>"><?php echo $data['user']->firstname . ' ' . $data['user']->lastname;?></a></span><span class="hide">, <span class="date"><?php formatDateMin($data['post']->published_at); ?></span></span>
                     </small>
                     <!-- SHOW BUTTONS IF USER IS LOGGED IN -->
                     <?php if(!empty($_SESSION['user_id']) && $data['user']->id == $_SESSION['user_id']) : ?>
@@ -24,7 +28,7 @@
                   
                   	<!-- Your share button code -->
                         <div class="fb-share-button" 
-                        data-href="<?php echo URLROOT; ?>/posts/article/<?php echo $data['post']->post_id; ?>" 
+                        data-href="<?php echo URLROOT; ?>/posts/article/<?php echo $data['post']->post_id; ?>/<?php echo formatUrl($data['post']->title);?>" 
                         data-layout="button_count">
                         </div>
                   		<div id="fb-root"></div>

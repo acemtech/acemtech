@@ -32,7 +32,8 @@
                     <div class="form-group mb-1">
                         <labe for="title">Titre</labe>
                         <input type="text" name="title" id="title" value="<?php echo (!empty($data['post']->title)) ? $data['post']->title : $data['title']; ?>">  
-                  	</div>
+                  		<small class="italic">Evitez les accents, le titre s'affiche toujours en majuscule</small>  	
+                  </div>
                   	
                   <span class="invalid-feedback"><?php echo $data['intro_error']; ?></span>
                   	<div class="form-group mb-1">
@@ -53,13 +54,16 @@
                         <span class="invalid-feedback"><?php echo $data['category_error']; ?></span>
                     </div>
                 <span class="invalid-feedback"><?php echo $data['body_error'] ? $data['body_error'] : ''; ?></span>
-                <div class="form-group">
-                    <textarea name="body" id="editor1" cols="80" rows="20" placeholder="article message">
-                        <?php echo $data['post']->body; ?>
+                <div class="form-group"> 
+                    <textarea name="body" id="editor1" cols="80" rows="20" placeholder="<?php echo $data['post']->body; ?>">
+                        <?php 
+                      			echo $data['post']->body; 
+                      			if(isset($_POST['body'])) echo $_POST['body'];
+                      	?>
                     </textarea>
 
                 </div>
-
+				
 
                 <div class="form-group">
                     <input type="submit" value="Valider" class="btn-sm btn-primary">

@@ -42,11 +42,12 @@
       }(document, 'script', 'facebook-jssdk'));</script>
 
      
+     <?php if($view == 'posts/ajouterarticle' || $view == 'posts/editer') : ?>
       <script src="<?php echo URLROOT; ?>/public/js/ckeditor/ckeditor.js"></script>                             <script src="<?php echo URLROOT; ?>/public/js/script.js"></script>
       <script>
           CKEDITOR.replace( 'editor1' );
       </script>
-      
+        <?php endif; ?>
 	  
   </body>
   </html>

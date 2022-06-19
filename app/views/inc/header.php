@@ -5,8 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title><?php echo APPNAME . ' | ' .
-showTitle($view); ?></title>
+    <title><?php if (empty($data['post']->title)) echo APPNAME . ' | ' . showTitle($view); else echo APPNAME . ' | ' . $data['post']->title;?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
@@ -23,7 +22,7 @@ showTitle($view); ?></title>
     <meta property="og:image" content="<?php echo URLROOT; ?>/storage/<?php if (!empty($data[post])) {  echo 'posts/' . $data['post']->img_name; } else { echo 'profiles/d2bcfa44319033e0889a4f75da7fcb246647abab.png'; }?>"/>
     <meta property="og:url" content="<?php echo URLROOT; ?>/posts/article/<?php echo $data['post']->post_id; ?>" />
     <meta property="og:site_name" content="ACEM TECH" />
-    <meta property="og:description" content="<?php if (!empty($data[post])) { echo limit_text($data[post]->body, 28); } else {  echo "Solution innovante favorisant l’enrichissement et la valorisation des projets innovants, cultivation d' esprit d’innovation, tout en facilitant l’esprit d’épanouissement.";}?>">
+    <meta property="og:description" content="<?php if (!empty($data[post])) { echo $data[post]->intro; } else {  echo "Solution innovante favorisant l’enrichissement et la valorisation des projets innovants, cultivation d' esprit d’innovation, tout en facilitant l’esprit d’épanouissement.";}?>">
     <meta name="twitter:title" content="" />
     <meta name="twitter:image" content="" />
     <meta name="twitter:url" content="" />

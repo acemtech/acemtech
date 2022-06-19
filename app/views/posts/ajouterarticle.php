@@ -13,6 +13,7 @@
             <?php flash('file_exist_error'); ?>
             <div class="form-group">
                 <input type="text" name="title" placeholder="Title" value="<?php echo $data['title'] ? $data['title'] : '';?>">
+              	<small class="italic">Evitez les accents, le titre s'affiche toujours en majuscule</small><br>
                 <span class="invalid-feedback"><?php echo $data['title_err']; ?></span>
             </div>
           

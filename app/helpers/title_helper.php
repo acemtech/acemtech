@@ -15,8 +15,8 @@ function showTitle($view) {
         case ('utilisateurs/connexion'):
             return $title = 'Connexion';
             break;
-        case ('utilisateurs/'):
-//        return $title = 'Dashboard';
+        case ('utilisateurs/index'):
+			return $title = 'Dashboard';
             break;
         case ('posts/index'):
             return $title = 'Dashboard';
@@ -27,8 +27,7 @@ function showTitle($view) {
         case ('posts/categorie'):
             return $title = 'Categorie';
             break;
-
         default:
-            return $title = 'Article';
+            return 'acemtech.org';
     }
 }

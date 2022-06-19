@@ -221,7 +221,7 @@ class Utilisateurs extends Controller {
                 
             // SMTP Configuration
             $mail->isSMTP();                                            //Send using SMTP
-            $mail->Host       = 'yourcphost.yourhosting.com';                     //Set the SMTP server to send through
+            $mail->Host       = 'cpanel.yourhostingprovider.com';                     //Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
             $mail->Username   = 'email@domain.com';                     //SMTP username
             $mail->Password   = 'yourpassword';                               //SMTP password
@@ -231,7 +231,7 @@ class Utilisateurs extends Controller {
             
             // Specifying PHPMailer headers
             $mail->setFrom($data['email'], $data['fullname']);
-            $mail->addAddress('youremail@domain.com');     //Server Mail
+            $mail->addAddress('email@domain.com');     //Server Mail
            
             // Content
             

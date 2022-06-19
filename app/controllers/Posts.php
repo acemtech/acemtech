@@ -229,7 +229,7 @@ class Posts extends Controller
                 if (empty($data['title_error']) && empty($data['intro_error']) && empty($data['body_error']) && empty($data['category_error']) && empty($data['filename'])) {
                     if ($this->postModel->updatePostNoImage($data)) {
                         flash('post_update_success', 'Votre poste a été mis à jour');
-                        redirect('posts/dashboard');
+                        redirect('posts/article/' . $id);
                     } else {
                         die('Une erreur est survenue! Merci de ressayer');
                     }
@@ -265,8 +265,8 @@ class Posts extends Controller
                                  // Delete old image from server
                                  $old_img = SITE_ROOT . "/storage/posts/" . $data['old_img'];
                                  unlink($old_img);
-                                 flash('bio_success', 'Votre bio a été mis à jour');
-                                 redirect('posts/dashboard');
+                                 flash('post_update_success', 'Votre poste a été mis à jour');
+                        		 redirect('posts/article/' . $id);
                              } else {
                                  die('Une erreur est survenue. Merci de ressayer');
                              }
@@ -312,15 +312,21 @@ class Posts extends Controller
     }
 
     public function article($id){
-
-        $post = $this->postModel->getPostById($id);
-        $user = $this->userModel->getUserById($post->user_id);
+      // check to see if the $id is not a string and is a valid post id
+		if(intval($id) != 0 && $this->postModel->getPostById($id) != null) {
+          
+        	$post = $this->postModel->getPostById($id);
+        	$user = $this->userModel->getUserById($post->user_id);
 
         $data = [
           'post' => $post,
           'user' => $user
         ];
         $this->view('posts/article', $data);
+      }
+      else {
+        redirect('accueil');
+      }
     }
 
     public function editerBio($id){
