@@ -226,9 +226,11 @@ class Posts extends Controller
                 }
 
                 // Make sure no errors left
+              	// User submit with no image
                 if (empty($data['title_error']) && empty($data['intro_error']) && empty($data['body_error']) && empty($data['category_error']) && empty($data['filename'])) {
                     if ($this->postModel->updatePostNoImage($data)) {
                         flash('post_update_success', 'Votre poste a été mis à jour');
+                        unset($_SESSION['body']);
                         redirect('posts/article/' . $id);
                     } else {
                         die('Une erreur est survenue! Merci de ressayer');
@@ -266,7 +268,10 @@ class Posts extends Controller
                                  $old_img = SITE_ROOT . "/storage/posts/" . $data['old_img'];
                                  unlink($old_img);
                                  flash('post_update_success', 'Votre poste a été mis à jour');
+                               	 // destroying the textarea session variable
+                               	 unset($_SESSION['body']);
                         		 redirect('posts/article/' . $id);
+                               
                              } else {
                                  die('Une erreur est survenue. Merci de ressayer');
                              }
@@ -304,6 +309,9 @@ class Posts extends Controller
                     'category_error' => '',
                     'filename_err'  => ''
                 ];
+              	// Set post session for body textarea
+              	//session_start();
+              	$_SESSION['body'] = $data['post']->body;
                 $this->view('posts/editer', $data);
             }
         } else {

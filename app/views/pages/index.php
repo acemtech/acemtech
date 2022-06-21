@@ -5,9 +5,9 @@
           <div class="showcase-container">
             <div class="showcase-content">
               <div class="category category-festivites">Festivites</div>
-              <h1>Journee Scientifique &amp; Culturelle</h1>
-              <p>L'association des comoriens étudiant au Maroc (ACEM) est une association qui entre dans le cadre estudiantin, sociale, scientifique, culturel et aussi religieux. Depuis 2002, l' ACEM organise chaque année des activités scientifiques et culturelles dans le but de ...
-              <div class="btn btn-primary"><a href="<?php echo URLROOT; ?>/jsc-fes-2021/"> En Savoir Plus</a></div>
+              <h1>Week-end Scientifique &amp; Culturel</h1>
+              <p>L'Association des Comoriens Etudiant au Maroc (ACEM) est une association qui entre dans le cadre estudiantin, sociale, scientifique, culturel et aussi religieux. Depuis 2002, l' ACEM organise chaque année des activités scientifiques et culturelles dans le but de ...
+              <div class="btn btn-primary"><a href="<?php echo URLROOT; ?>/wsc-marrakech-2022/" target="_blank"> En Savoir Plus</a></div>
             </div>
           </div>
         </div>

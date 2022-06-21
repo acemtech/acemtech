@@ -13,13 +13,15 @@ class Utilisateurs extends Controller {
         $this->postModel = $this->model('Post');
     }
 
+  // COMMENT AND UNCOMMENT THIS TO ENABE=LE USER SIGN UP
+  
     public function inscription(){
         /*
          * Check submit, check inputs, validate inputs, check errors
          * if everything is clean call model register function
          * if registered print success message
-         */
-
+         
+		*/
 //        Check if submitted
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
 //            Process form
@@ -106,6 +108,8 @@ class Utilisateurs extends Controller {
             $this->view('utilisateurs/inscription', $data);
         }
     }
+ 
+
 
     public function connexion() {
 //        Check if post submitted
@@ -221,17 +225,17 @@ class Utilisateurs extends Controller {
                 
             // SMTP Configuration
             $mail->isSMTP();                                            //Send using SMTP
-            $mail->Host       = 'cpanel.yourhostingprovider.com';                     //Set the SMTP server to send through
+            $mail->Host       = 'cpanel.freehosting.com';                     //Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-            $mail->Username   = 'email@domain.com';                     //SMTP username
-            $mail->Password   = 'yourpassword';                               //SMTP password
+            $mail->Username   = 'geeks@acem.tech';                     //SMTP username
+            $mail->Password   = 'Pb4649t2008';                               //SMTP password
             //$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
             $mail->Port       = 587;  
             
             
             // Specifying PHPMailer headers
             $mail->setFrom($data['email'], $data['fullname']);
-            $mail->addAddress('email@domain.com');     //Server Mail
+            $mail->addAddress('geeks@acem.tech');     //Server Mail
            
             // Content
             

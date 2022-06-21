@@ -58,7 +58,7 @@
                     <textarea name="body" id="editor1" cols="80" rows="20" placeholder="<?php echo $data['post']->body; ?>">
                         <?php 
                       			echo $data['post']->body; 
-                      			if(isset($_POST['body'])) echo $_POST['body'];
+                      			if(empty($data['post'])) echo $_SESSION['body'];
                       	?>
                     </textarea>
 

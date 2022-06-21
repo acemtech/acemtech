@@ -677,7 +677,7 @@ textarea::placeholder {
 
 #showcase::before {
   content: '';
-  background: #000 url('../images/showcase.png') no-repeat top center/cover;
+  background: #000 url('../images/showcase.png') no-repeat center/cover;
   position: absolute;
   top: 0;
   left: 0;
