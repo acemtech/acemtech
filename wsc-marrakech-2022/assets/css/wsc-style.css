@@ -93,6 +93,10 @@ body {
   margin-top: 0;
 }
 
+.italic {
+	font-style: italic;
+}
+
 .centered {
   display: flex;
   align-items: center;
@@ -287,6 +291,11 @@ section {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.72);
 }
+
+.fb-share-button {
+    float: right;
+  	
+ }
 
 #showcase .showcase-content .item:last-child {
   position: absolute;

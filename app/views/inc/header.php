@@ -17,7 +17,7 @@
     />
     <meta name="author" content="ACEM TECH"/>
     <!-- Facebook and Twitter integration -->
-    <meta property="og:title" content="<?php echo $data['post']->title; ?>" />
+    <meta property="og:title" content="<?php if($view === 'pages/apropos') { echo 'ACEMTECH | A propos'; } elseif($view === 'pages/index') { echo 'ACEMTECH | Accueil'; } else  { echo $data['post']->title; } ?>" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="<?php echo URLROOT; ?>/storage/<?php if (!empty($data[post])) {  echo 'posts/' . $data['post']->img_name; } else { echo 'profiles/d2bcfa44319033e0889a4f75da7fcb246647abab.png'; }?>"/>
     <meta property="og:url" content="<?php echo URLROOT; ?>/posts/article/<?php echo $data['post']->post_id; ?>" />

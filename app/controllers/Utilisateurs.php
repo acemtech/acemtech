@@ -14,7 +14,7 @@ class Utilisateurs extends Controller {
     }
 
   // COMMENT AND UNCOMMENT THIS TO ENABE=LE USER SIGN UP
-  
+ 	
     public function inscription(){
         /*
          * Check submit, check inputs, validate inputs, check errors
@@ -225,17 +225,17 @@ class Utilisateurs extends Controller {
                 
             // SMTP Configuration
             $mail->isSMTP();                                            //Send using SMTP
-            $mail->Host       = 'cpanel.freehosting.com';                     //Set the SMTP server to send through
+            $mail->Host       = 'cpanel.yourhostingprovider.com';                     //Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-            $mail->Username   = 'geeks@acem.tech';                     //SMTP username
-            $mail->Password   = 'Pb4649t2008';                               //SMTP password
+            $mail->Username   = 'email@yourdomaincom';                     //SMTP username
+            $mail->Password   = 'yoursmtppassword';                               //SMTP password
             //$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
             $mail->Port       = 587;  
             
             
             // Specifying PHPMailer headers
             $mail->setFrom($data['email'], $data['fullname']);
-            $mail->addAddress('geeks@acem.tech');     //Server Mail
+            $mail->addAddress('email@yourdomaincom');     //Server Mail
            
             // Content
             
